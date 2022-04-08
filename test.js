@@ -30,7 +30,7 @@ const transformersMap = () => {
         return `${element.form}`
       })
 }
-console.log(transformersMap())
+console.log(`Transformers Map: ${transformersMap()}`)
 /*
 Filter Transformers
 Using filter, return an array of transformer objects that have the 'team' property of 'Autobot'
@@ -71,9 +71,13 @@ const transformersFilter = () => {
           team: 'Decepticon'
         }
       ]
-
+let transformerArrayFilter = (element) =>{
+  return element.team == "Autobot"
 }
-
+return transformers.filter(transformerArrayFilter)
+}
+console.log("Transformer filter:")
+console.log(transformersFilter())
 /*
 Reduce Transformers
 Using reduce, return an object that has a count for each team of transformer
