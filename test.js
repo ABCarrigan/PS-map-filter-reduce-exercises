@@ -26,7 +26,11 @@ const transformersMap = () => {
           team: 'Decepticon'
         }
       ];
+      return transformers.map(function(element){
+        return `${element.form}`
+      })
 }
+console.log(transformersMap())
 /*
 Filter Transformers
 Using filter, return an array of transformer objects that have the 'team' property of 'Autobot'
@@ -172,4 +176,3 @@ const ageDifference = () => {
         }
       ];
 }
-
