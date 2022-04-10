@@ -109,9 +109,18 @@ const reduceTransformers = () => {
           team: 'Decepticon'
         }
       ]
-}
-
-
+      let totalAutobots =  transformers.reduce((acc, cur) => {
+        if(acc[cur.team]) {
+          acc[cur.team] = acc[cur.team] + 1
+        } else {
+          acc[cur.team] = 1
+        }
+        return acc
+      }, {})
+      return totalAutobots
+    }
+console.log('Reduce Transformers:')
+console.log(reduceTransformers())
 
 /*
 
